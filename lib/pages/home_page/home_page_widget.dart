@@ -42,7 +42,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         resizeToAvoidBottomInset: false,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Color(0x46E90000),
           iconTheme: IconThemeData(color: Color(0xFFEA7B7B)),
