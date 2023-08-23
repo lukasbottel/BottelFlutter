@@ -45,6 +45,14 @@ class _StoreCopyCopyCopyWidgetState extends State<StoreCopyCopyCopyWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        appBar: AppBar(
+          backgroundColor: FlutterFlowTheme.of(context).primary,
+          iconTheme: IconThemeData(color: Color(0xFFEA7B7B)),
+          automaticallyImplyLeading: true,
+          actions: [],
+          centerTitle: true,
+          elevation: 4.0,
+        ),
         body: SafeArea(
           top: true,
           child: Stack(
