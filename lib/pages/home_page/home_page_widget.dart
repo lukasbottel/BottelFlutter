@@ -43,35 +43,32 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         key: scaffoldKey,
         resizeToAvoidBottomInset: false,
         backgroundColor: Color(0xFFFF0000),
-        body: SafeArea(
-          top: true,
-          child: Stack(
-            children: [
-              FlutterFlowGoogleMap(
-                controller: _model.googleMapsController,
-                onCameraIdle: (latLng) => _model.googleMapsCenter = latLng,
-                initialLocation: _model.googleMapsCenter ??=
-                    LatLng(13.106061, -59.613158),
-                markerColor: GoogleMarkerColor.violet,
-                mapType: MapType.normal,
-                style: GoogleMapStyle.silver,
-                initialZoom: 16.0,
-                allowInteraction: true,
-                allowZoom: true,
-                showZoomControls: false,
-                showLocation: true,
-                showCompass: false,
-                showMapToolbar: false,
-                showTraffic: false,
-                centerMapOnMarkerTap: false,
-              ),
-              wrapWithModel(
-                model: _model.navBar1Model,
-                updateCallback: () => setState(() {}),
-                child: NavBar1Widget(),
-              ),
-            ],
-          ),
+        body: Stack(
+          children: [
+            FlutterFlowGoogleMap(
+              controller: _model.googleMapsController,
+              onCameraIdle: (latLng) => _model.googleMapsCenter = latLng,
+              initialLocation: _model.googleMapsCenter ??=
+                  LatLng(13.106061, -59.613158),
+              markerColor: GoogleMarkerColor.violet,
+              mapType: MapType.normal,
+              style: GoogleMapStyle.silver,
+              initialZoom: 16.0,
+              allowInteraction: true,
+              allowZoom: true,
+              showZoomControls: false,
+              showLocation: true,
+              showCompass: false,
+              showMapToolbar: false,
+              showTraffic: false,
+              centerMapOnMarkerTap: false,
+            ),
+            wrapWithModel(
+              model: _model.navBar1Model,
+              updateCallback: () => setState(() {}),
+              child: NavBar1Widget(),
+            ),
+          ],
         ),
       ),
     );
