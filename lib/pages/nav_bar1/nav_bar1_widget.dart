@@ -63,7 +63,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                   child: Container(
                     width: double.infinity,
-                    height: 50.0,
+                    height: 55.0,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [Colors.white, Color(0xFFFEFEFE)],
