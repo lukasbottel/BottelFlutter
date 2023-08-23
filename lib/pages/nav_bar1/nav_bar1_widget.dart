@@ -63,7 +63,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                   child: Container(
                     width: double.infinity,
-                    height: 55.0,
+                    height: 75.0,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [Colors.white, Color(0xFFFEFEFE)],
@@ -83,10 +83,10 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 8.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FlutterFlowIconButton(
                         borderColor: Colors.transparent,
@@ -114,10 +114,10 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FlutterFlowIconButton(
                         borderColor: Colors.transparent,
@@ -201,10 +201,10 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FlutterFlowIconButton(
                         borderColor: Colors.transparent,
@@ -232,10 +232,10 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 10.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FlutterFlowIconButton(
                         borderColor: Colors.transparent,
