@@ -129,8 +129,8 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                           color: Color(0xFFBDBDBD),
                           size: 24.0,
                         ),
-                        onPressed: () {
-                          print('IconButton pressed ...');
+                        onPressed: () async {
+                          context.pushNamed('HomePage');
                         },
                       ),
                       Text(
@@ -202,43 +202,33 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      context.pushNamed('StoreCopyCopy');
-                    },
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        FlutterFlowIconButton(
-                          borderColor: Colors.transparent,
-                          borderRadius: 30.0,
-                          borderWidth: 1.0,
-                          buttonSize: 40.0,
-                          icon: FaIcon(
-                            FontAwesomeIcons.store,
-                            color: Color(0xFFC7C7C7),
-                            size: 24.0,
-                          ),
-                          onPressed: () {
-                            print('IconButton pressed ...');
-                          },
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      FlutterFlowIconButton(
+                        borderColor: Colors.transparent,
+                        borderRadius: 30.0,
+                        borderWidth: 1.0,
+                        buttonSize: 40.0,
+                        icon: FaIcon(
+                          FontAwesomeIcons.store,
+                          color: Color(0xFFC7C7C7),
+                          size: 24.0,
                         ),
-                        Text(
-                          'Store',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Color(0xDFAEAEAE),
-                                    fontSize: 8.5,
-                                  ),
-                        ),
-                      ],
-                    ),
+                        onPressed: () async {
+                          context.pushNamed('StoreCopyCopyCopy');
+                        },
+                      ),
+                      Text(
+                        'Store',
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              color: Color(0xDFAEAEAE),
+                              fontSize: 8.5,
+                            ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
@@ -257,8 +247,8 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                           color: Color(0xFFC7C7C7),
                           size: 24.0,
                         ),
-                        onPressed: () {
-                          print('IconButton pressed ...');
+                        onPressed: () async {
+                          context.pushNamed('Settings');
                         },
                       ),
                       Text(
