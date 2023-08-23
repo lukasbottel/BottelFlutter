@@ -46,7 +46,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(35.0),
           child: AppBar(
-            backgroundColor: Color(0x46E90000),
+            backgroundColor: Colors.white,
             iconTheme: IconThemeData(color: Color(0xFFEA7B7B)),
             automaticallyImplyLeading: false,
             actions: [
