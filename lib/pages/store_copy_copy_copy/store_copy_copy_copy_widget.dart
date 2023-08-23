@@ -122,15 +122,24 @@ class _StoreCopyCopyCopyWidgetState extends State<StoreCopyCopyCopyWidget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 4.0, 0.0),
-                            child: Container(
-                              width: 25.0,
-                              height: 25.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: Image.asset(
-                                    'assets/images/icon_XD.png',
-                                  ).image,
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('HomePage');
+                              },
+                              child: Container(
+                                width: 25.0,
+                                height: 25.0,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: Image.asset(
+                                      'assets/images/icon_XD.png',
+                                    ).image,
+                                  ),
                                 ),
                               ),
                             ),
