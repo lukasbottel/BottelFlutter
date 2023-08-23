@@ -43,66 +43,70 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         key: scaffoldKey,
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Color(0x46E90000),
-          iconTheme: IconThemeData(color: Color(0xFFEA7B7B)),
-          automaticallyImplyLeading: false,
-          actions: [
-            Container(
-              width: 100.0,
-              height: 100.0,
-              decoration: BoxDecoration(),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 6.0, 0.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
-                      child: Text(
-                        '99',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: Color(0xFF50C692),
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.w300,
-                            ),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(35.0),
+          child: AppBar(
+            backgroundColor: Color(0x46E90000),
+            iconTheme: IconThemeData(color: Color(0xFFEA7B7B)),
+            automaticallyImplyLeading: false,
+            actions: [
+              Container(
+                width: 100.0,
+                height: 100.0,
+                decoration: BoxDecoration(),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 6.0, 0.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
+                        child: Text(
+                          '99',
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF50C692),
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          context.pushNamed('HomePage');
-                        },
-                        child: Container(
-                          width: 25.0,
-                          height: 25.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/icon_XD.png',
-                              ).image,
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('HomePage');
+                          },
+                          child: Container(
+                            width: 25.0,
+                            height: 25.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: Image.asset(
+                                  'assets/images/icon_XD.png',
+                                ).image,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
-          centerTitle: true,
-          elevation: 0.0,
+            ],
+            centerTitle: true,
+            elevation: 0.0,
+          ),
         ),
         body: SafeArea(
           top: true,
