@@ -62,7 +62,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                   child: Container(
                     width: double.infinity,
-                    height: 100.0,
+                    height: 85.0,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [Colors.white, Color(0xFFFEFEFE)],
@@ -85,7 +85,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 50.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 30.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -118,7 +118,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -151,7 +151,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 50.0),
+                        EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 35.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -208,7 +208,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -241,7 +241,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 50.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 30.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
