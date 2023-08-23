@@ -42,7 +42,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         resizeToAvoidBottomInset: false,
-        backgroundColor: Color(0xFFFF0000),
+        backgroundColor: Colors.white,
         body: Stack(
           children: [
             FlutterFlowGoogleMap(
