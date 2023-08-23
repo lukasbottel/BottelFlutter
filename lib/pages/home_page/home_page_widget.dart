@@ -117,7 +117,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 mapType: MapType.normal,
                 style: GoogleMapStyle.silver,
                 initialZoom: 14.0,
-                allowInteraction: true,
+                allowInteraction: false,
                 allowZoom: true,
                 showZoomControls: false,
                 showLocation: false,
