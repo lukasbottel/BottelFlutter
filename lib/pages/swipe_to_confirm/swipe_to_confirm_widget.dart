@@ -1,7 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'swipe_to_confirm_model.dart';
@@ -42,7 +42,7 @@ class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
 
     return Container(
       width: double.infinity,
-      height: 270.0,
+      height: 400.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
         boxShadow: [
@@ -60,37 +60,60 @@ class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
+        padding: EdgeInsetsDirectional.fromSTEB(18.0, 18.0, 18.0, 18.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             Align(
-              alignment: AlignmentDirectional(1.0, -1.0),
-              child: FFButtonWidget(
-                onPressed: () async {
-                  context.pop();
+              alignment: AlignmentDirectional(1.0, 0.0),
+              child: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  context.safePop();
                 },
-                text: '',
-                icon: Icon(
-                  Icons.close,
-                  size: 15.0,
-                ),
-                options: FFButtonOptions(
-                  height: 40.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Lexend Deca',
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        fontWeight: FontWeight.normal,
-                      ),
-                  elevation: 0.0,
-                  borderSide: BorderSide(
-                    color: Colors.transparent,
-                    width: 0.0,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: SvgPicture.asset(
+                    'assets/images/close1.svg',
+                    width: 30.0,
+                    height: 30.0,
+                    fit: BoxFit.cover,
                   ),
+                ),
+              ),
+            ),
+            Text(
+              '1000 V-Bucks',
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Readex Pro',
+                    color: Color(0xFFB1B1B1),
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.w300,
+                  ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+              child: Text(
+                'Confirm purchase',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      color: Color(0xFFCECECE),
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(
+                  'assets/images/vbucks1.png',
+                  width: MediaQuery.sizeOf(context).width * 0.5,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
