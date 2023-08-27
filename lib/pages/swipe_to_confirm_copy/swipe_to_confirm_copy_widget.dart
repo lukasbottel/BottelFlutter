@@ -1,21 +1,23 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'swipe_to_confirm_model.dart';
-export 'swipe_to_confirm_model.dart';
+import 'swipe_to_confirm_copy_model.dart';
+export 'swipe_to_confirm_copy_model.dart';
 
-class SwipeToConfirmWidget extends StatefulWidget {
-  const SwipeToConfirmWidget({Key? key}) : super(key: key);
+class SwipeToConfirmCopyWidget extends StatefulWidget {
+  const SwipeToConfirmCopyWidget({Key? key}) : super(key: key);
 
   @override
-  _SwipeToConfirmWidgetState createState() => _SwipeToConfirmWidgetState();
+  _SwipeToConfirmCopyWidgetState createState() =>
+      _SwipeToConfirmCopyWidgetState();
 }
 
-class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
-  late SwipeToConfirmModel _model;
+class _SwipeToConfirmCopyWidgetState extends State<SwipeToConfirmCopyWidget> {
+  late SwipeToConfirmCopyModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -26,7 +28,7 @@ class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SwipeToConfirmModel());
+    _model = createModel(context, () => SwipeToConfirmCopyModel());
   }
 
   @override
@@ -115,6 +117,14 @@ class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
                   width: MediaQuery.sizeOf(context).width * 0.5,
                   fit: BoxFit.cover,
                 ),
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 200.0,
+              child: custom_widgets.MyHomePage(
+                width: double.infinity,
+                height: 200.0,
               ),
             ),
           ],

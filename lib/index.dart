@@ -8,3 +8,4 @@ export '/pages/store_copy_copy/store_copy_copy_widget.dart'
     show StoreCopyCopyWidget;
 export '/pages/store_copy_copy_copy/store_copy_copy_copy_widget.dart'
     show StoreCopyCopyCopyWidget;
+export '/pub_dev_test/pub_dev_test_widget.dart' show PubDevTestWidget;
