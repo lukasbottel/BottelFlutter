@@ -33,40 +33,24 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title ?? "Custom Action Slider Example"),
-      ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // ... (Your other sliders can go here)
-
-            const SizedBox(height: 24.0),
-            ActionSlider.standard(
-              width: 300.0,
-              backgroundColor: Colors.black,
-              reverseSlideAnimationCurve: Curves.easeInOut,
-              reverseSlideAnimationDuration: const Duration(milliseconds: 500),
-              toggleColor: Colors.purpleAccent,
-              icon: const Icon(Icons.add),
-              action: (controller) async {
-                controller.loading(); //starts loading animation
-                await Future.delayed(const Duration(seconds: 3));
-                controller.success(); //starts success animation
-                await Future.delayed(const Duration(seconds: 1));
-                controller.reset(); //resets the slider
-              },
-              child: const Text(
-                'Rolling slider',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            // ... (Your other sliders can go here)
-          ],
+        child: ActionSlider.standard(
+          width: 300.0,
+          backgroundColor: Color(0xFFFFFFFF), // Hex color for background
+          toggleColor: Color(0xFF50C692), // Hex color for the toggle/slider
+          icon: const Icon(Icons.add),
+          action: (controller) async {
+            controller.loading(); // Starts loading animation
+            await Future.delayed(const Duration(seconds: 3));
+            controller.success(); // Starts success animation
+            await Future.delayed(const Duration(seconds: 1));
+            controller.reset(); // Resets the slider
+          },
+          child: Text(
+            'Slide to confirm',
+            style: TextStyle(color: Color(0xFFB3BFD1)), // Hex color for text
+          ),
         ),
       ),
     );
