@@ -46,13 +46,16 @@ class _WalletWidgetState extends State<WalletWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Container(
-                width: double.infinity,
-                height: 800.0,
-                child: custom_widgets.MyHomePage(
+              Align(
+                alignment: AlignmentDirectional(0.0, 1.0),
+                child: Container(
                   width: double.infinity,
-                  height: 800.0,
-                  title: 'bottel',
+                  height: 90.0,
+                  child: custom_widgets.MyHomePage(
+                    width: double.infinity,
+                    height: 90.0,
+                    title: 'aaa',
+                  ),
                 ),
               ),
             ],

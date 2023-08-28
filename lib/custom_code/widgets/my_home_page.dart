@@ -29,88 +29,43 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  double _sliderValue = 0.0;
+  final _controller = ActionSliderController();
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Custom Slider Example'),
+        title: Text(widget.title ?? "Custom Action Slider Example"),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 300,
-              height: 60,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(63.238),
-                border: Border.all(
-                  color: Color.fromRGBO(204, 204, 204, 0.4),
-                  width: 1.581,
-                ),
-                gradient: LinearGradient(
-                  colors: [Color(0xFFF4F6FB), Colors.transparent],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-              ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 0,
-                    right: 0,
-                    top: 0,
-                    bottom: 0,
-                    child: Opacity(
-                      opacity: 1 - _sliderValue,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Swipe to confirm',
-                            style: TextStyle(
-                              color: Color(0xFF50C692),
-                              fontSize: 57.184,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                '-9',
-                                style: TextStyle(
-                                  color: Color(0xFF50C692),
-                                  fontSize: 57.184,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              Icon(Icons.ac_unit) // Replace with your SVG icon
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SliderTheme(
-                    data: SliderThemeData(
-                      thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15),
-                    ),
-                    child: Slider(
-                      value: _sliderValue,
-                      onChanged: (value) {
-                        setState(() {
-                          _sliderValue = value;
-                        });
-                      },
-                      activeColor: Color(0xFF50C692),
-                      inactiveColor: Colors.transparent,
-                    ),
-                  ),
-                ],
+          children: <Widget>[
+            // ... (Your other sliders can go here)
+
+            const SizedBox(height: 24.0),
+            ActionSlider.standard(
+              width: 300.0,
+              backgroundColor: Colors.black,
+              reverseSlideAnimationCurve: Curves.easeInOut,
+              reverseSlideAnimationDuration: const Duration(milliseconds: 500),
+              toggleColor: Colors.purpleAccent,
+              icon: const Icon(Icons.add),
+              action: (controller) async {
+                controller.loading(); //starts loading animation
+                await Future.delayed(const Duration(seconds: 3));
+                controller.success(); //starts success animation
+                await Future.delayed(const Duration(seconds: 1));
+                controller.reset(); //resets the slider
+              },
+              child: const Text(
+                'Rolling slider',
+                style: TextStyle(color: Colors.white),
               ),
             ),
+            // ... (Your other sliders can go here)
           ],
         ),
       ),
