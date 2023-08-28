@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,7 +43,7 @@ class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
 
     return Container(
       width: double.infinity,
-      height: 450.0,
+      height: 800.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
         boxShadow: [
@@ -115,6 +116,15 @@ class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
                   width: MediaQuery.sizeOf(context).width * 0.5,
                   fit: BoxFit.cover,
                 ),
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 300.0,
+              child: custom_widgets.MyHomePage(
+                width: double.infinity,
+                height: 300.0,
+                title: 'bottel',
               ),
             ),
           ],

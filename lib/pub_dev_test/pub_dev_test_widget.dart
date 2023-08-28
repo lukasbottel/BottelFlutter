@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -44,7 +45,17 @@ class _PubDevTestWidgetState extends State<PubDevTestWidget> {
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              Container(
+                width: double.infinity,
+                height: MediaQuery.sizeOf(context).height * 1.0,
+                child: custom_widgets.SlidingUpPanelExample(
+                  width: double.infinity,
+                  height: MediaQuery.sizeOf(context).height * 1.0,
+                  title: 'now its working',
+                ),
+              ),
+            ],
           ),
         ),
       ),

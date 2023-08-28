@@ -43,20 +43,7 @@ class SlidingUpPanelExample extends StatefulWidget {
 class _SlidingUpPanelExampleState extends State<SlidingUpPanelExample> {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.grey[200],
-      systemNavigationBarIconBrightness: Brightness.dark,
-      systemNavigationBarDividerColor: Colors.black,
-    ));
-
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'SlidingUpPanel Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(title: widget.title ?? "Default Title"),
-    );
+    return HomePage(title: widget.title ?? "Default Title");
   }
 }
 
