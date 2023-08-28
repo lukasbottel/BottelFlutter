@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
+import 'package:flutter_svg/svg.dart';
+
 import 'dart:math';
 import 'package:action_slider/action_slider.dart';
 import 'dart:ui' as ui;
@@ -27,48 +29,85 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _controller = ActionSliderController();
+  double sliderValue = 0.0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Slider Example"),
-      ),
+      appBar: AppBar(title: Text('Custom Slider')),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Other sliders can go here
-
-            // This is the third slider from the left, modified as per your requirements
-            ActionSlider.custom(
-              width: 300.0,
-              controller: _controller,
-              toggleWidth: 60.0,
-              height: 60.0,
-              backgroundColor: Colors.white,
-              foregroundChild: Container(
-                decoration: BoxDecoration(
-                  color: Color(0xFF50C692), // Changing the color to #50C692
-                  borderRadius: BorderRadius.all(Radius.circular(
-                      8)), // Making it square with rounded corners
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            // Background Casing
+            Container(
+              width: 300,
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  color: Colors.grey.withOpacity(0.4),
+                  width: 1.5,
                 ),
-                child: Center(
-                  child: Text('Swipe to Confirm'), // Changing the text
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xFFF4F6FB), Colors.transparent],
                 ),
               ),
-              foregroundBuilder: (context, state, child) => child!,
-              action: (controller) async {
-                controller.loading(); // Starts loading animation
-                await Future.delayed(const Duration(seconds: 3));
-                controller.success(); // Starts success animation
-                await Future.delayed(const Duration(seconds: 1));
-                controller.reset(); // Resets the slider
-              },
             ),
-
-            // Other sliders can go here
+            // Background Text and Icon
+            Opacity(
+              opacity:
+                  1 - sliderValue, // This line sets the opacity dynamically
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Swipe to confirm',
+                    style: TextStyle(
+                      color: Color(0xFF50C692),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        '-9',
+                        style: TextStyle(
+                          color: Color(0xFF50C692),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(width: 5),
+                      SvgPicture.asset(
+                        'assets/bottlecoin_icon.svg', // Replace with your actual SVG asset path
+                        width: 20,
+                        height: 20,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            // Slider
+            SliderTheme(
+              data: SliderThemeData(
+                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15),
+              ),
+              child: Slider(
+                value: sliderValue,
+                onChanged: (value) {
+                  setState(() {
+                    sliderValue = value;
+                  });
+                },
+                activeColor: Color(0xFF50C692),
+                inactiveColor: Colors.transparent,
+              ),
+            ),
           ],
         ),
       ),
