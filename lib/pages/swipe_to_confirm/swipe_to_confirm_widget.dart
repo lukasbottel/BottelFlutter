@@ -87,7 +87,7 @@ class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
               ),
             ),
             Text(
-              '1000 V-Bucks',
+              '1000 BBucks',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Readex Pro',
                     color: Color(0xFFB1B1B1),
