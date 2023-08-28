@@ -29,85 +29,40 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  double sliderValue = 0.0;
-
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Scaffold(
-      appBar: AppBar(title: Text('Custom Slider')),
+      appBar: AppBar(
+        title: Text("Action Slider Example"),
+      ),
       body: Center(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            // Background Casing
-            Container(
-              width: 300,
-              height: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(
-                  color: Colors.grey.withOpacity(0.4),
-                  width: 1.5,
-                ),
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xFFF4F6FB), Colors.transparent],
-                ),
-              ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            // ... (other sliders can go here)
+
+            const SizedBox(height: 24.0),
+            ActionSlider.standard(
+              rolling: true,
+              width: 300.0,
+              backgroundColor: Colors.black,
+              reverseSlideAnimationCurve: Curves.easeInOut,
+              reverseSlideAnimationDuration: const Duration(milliseconds: 500),
+              toggleColor: Colors.purpleAccent,
+              icon: const Icon(Icons.add),
+              action: (controller) async {
+                controller.loading(); //starts loading animation
+                await Future.delayed(const Duration(seconds: 3));
+                controller.success(); //starts success animation
+                await Future.delayed(const Duration(seconds: 1));
+                controller.reset(); //resets the slider
+              },
+              child: const Text('Rolling slider',
+                  style: TextStyle(color: Colors.white)),
             ),
-            // Background Text and Icon
-            Opacity(
-              opacity:
-                  1 - sliderValue, // This line sets the opacity dynamically
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Swipe to confirm',
-                    style: TextStyle(
-                      color: Color(0xFF50C692),
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        '-9',
-                        style: TextStyle(
-                          color: Color(0xFF50C692),
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(width: 5),
-                      SvgPicture.asset(
-                        'assets/bottlecoin_icon.svg', // Replace with your actual SVG asset path
-                        width: 20,
-                        height: 20,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            // Slider
-            SliderTheme(
-              data: SliderThemeData(
-                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15),
-              ),
-              child: Slider(
-                value: sliderValue,
-                onChanged: (value) {
-                  setState(() {
-                    sliderValue = value;
-                  });
-                },
-                activeColor: Color(0xFF50C692),
-                inactiveColor: Colors.transparent,
-              ),
-            ),
+            // ... (other sliders can go here)
           ],
         ),
       ),
