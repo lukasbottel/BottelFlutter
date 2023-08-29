@@ -42,98 +42,105 @@ class _SwipeToConfirmWidgetState extends State<SwipeToConfirmWidget> {
     context.watch<FFAppState>();
 
     return Container(
-      width: double.infinity,
-      height: 450.0,
+      width: 100.0,
+      height: 100.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 5.0,
-            color: Color(0x3B1D2429),
-            offset: Offset(0.0, -3.0),
-          )
-        ],
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(0.0),
-          bottomRight: Radius.circular(0.0),
-          topLeft: Radius.circular(16.0),
-          topRight: Radius.circular(16.0),
-        ),
       ),
-      child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(18.0, 18.0, 18.0, 18.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Align(
-              alignment: AlignmentDirectional(1.0, 0.0),
-              child: InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.safePop();
-                },
+      child: Container(
+        width: double.infinity,
+        height: 450.0,
+        decoration: BoxDecoration(
+          color: FlutterFlowTheme.of(context).secondaryBackground,
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 5.0,
+              color: Color(0x3B1D2429),
+              offset: Offset(0.0, -3.0),
+            )
+          ],
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(0.0),
+            bottomRight: Radius.circular(0.0),
+            topLeft: Radius.circular(16.0),
+            topRight: Radius.circular(16.0),
+          ),
+        ),
+        child: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(18.0, 18.0, 18.0, 18.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Align(
+                alignment: AlignmentDirectional(1.0, 0.0),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.safePop();
+                  },
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: SvgPicture.asset(
+                      'assets/images/close1.svg',
+                      width: 30.0,
+                      height: 30.0,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Text(
+                '1000 BBucks',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      color: Color(0xFFB1B1B1),
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                child: Text(
+                  'Confirm purchase',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Readex Pro',
+                        color: Color(0xFFCECECE),
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w300,
+                      ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
-                  child: SvgPicture.asset(
-                    'assets/images/close1.svg',
-                    width: 30.0,
-                    height: 30.0,
+                  child: Image.asset(
+                    'assets/images/vbucks1.png',
+                    width: MediaQuery.sizeOf(context).width * 0.5,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-            ),
-            Text(
-              '1000 BBucks',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Readex Pro',
-                    color: Color(0xFFB1B1B1),
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.w300,
-                  ),
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
-              child: Text(
-                'Confirm purchase',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Readex Pro',
-                      color: Color(0xFFCECECE),
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w300,
-                    ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(
-                  'assets/images/vbucks1.png',
-                  width: MediaQuery.sizeOf(context).width * 0.5,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 90.0,
-                  child: custom_widgets.MyHomePage(
+              Align(
+                alignment: AlignmentDirectional(0.0, 1.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                  child: Container(
                     width: double.infinity,
                     height: 90.0,
-                    title: 'aaa',
+                    child: custom_widgets.MyHomePage(
+                      width: double.infinity,
+                      height: 90.0,
+                      title: 'aaa',
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
