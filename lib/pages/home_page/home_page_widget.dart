@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/nav_bar1/nav_bar1_widget.dart';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -67,6 +68,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               model: _model.navBar1Model,
               updateCallback: () => setState(() {}),
               child: NavBar1Widget(),
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(0.0),
+              child: BackdropFilter(
+                filter: ImageFilter.blur(
+                  sigmaX: 5.0,
+                  sigmaY: 7.0,
+                ),
+                child: Container(
+                  width: double.infinity,
+                  height: MediaQuery.sizeOf(context).height * 1.0,
+                  decoration: BoxDecoration(
+                    color: Color(0x4F0F0F0F),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
