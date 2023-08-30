@@ -1,8 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'scan_model.dart';
@@ -43,7 +42,7 @@ class _ScanWidgetState extends State<ScanWidget> {
 
     return Container(
       width: double.infinity,
-      height: 270.0,
+      height: 800.0,
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -64,63 +63,14 @@ class _ScanWidgetState extends State<ScanWidget> {
         padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            FFButtonWidget(
-              onPressed: () async {
-                _model.scannedValue = await FlutterBarcodeScanner.scanBarcode(
-                  '#C62828', // scanning line color
-                  'Cancel', // cancel button text
-                  true, // whether to show the flash icon
-                  ScanMode.QR,
-                );
-
-                setState(() {});
-              },
-              text: 'Button',
-              options: FFButtonOptions(
-                height: 40.0,
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                color: FlutterFlowTheme.of(context).primary,
-                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                      fontFamily: 'Readex Pro',
-                      color: Colors.white,
-                    ),
-                elevation: 3.0,
-                borderSide: BorderSide(
-                  color: Colors.transparent,
-                  width: 1.0,
-                ),
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-              child: FFButtonWidget(
-                onPressed: () async {
-                  context.pop();
-                },
-                text: 'Cancel',
-                options: FFButtonOptions(
-                  width: double.infinity,
-                  height: 60.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: Colors.white,
-                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF57636C),
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.normal,
-                      ),
-                  elevation: 0.0,
-                  borderSide: BorderSide(
-                    color: Colors.transparent,
-                    width: 0.0,
-                  ),
-                ),
+            Container(
+              width: double.infinity,
+              height: 300.0,
+              child: custom_widgets.CustomScanner(
+                width: double.infinity,
+                height: 300.0,
               ),
             ),
           ],
