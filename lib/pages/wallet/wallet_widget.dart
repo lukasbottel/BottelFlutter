@@ -1,6 +1,5 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -45,20 +44,8 @@ class _WalletWidgetState extends State<WalletWidget> {
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [
-              Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 90.0,
-                  child: custom_widgets.MyHomePage(
-                    width: double.infinity,
-                    height: 90.0,
-                    title: 'aaa',
-                  ),
-                ),
-              ),
-            ],
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [],
           ),
         ),
       ),
