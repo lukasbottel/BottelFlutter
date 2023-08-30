@@ -67,10 +67,10 @@ class _ScanWidgetState extends State<ScanWidget> {
           children: [
             Container(
               width: double.infinity,
-              height: 300.0,
+              height: 600.0,
               child: custom_widgets.CustomScanner(
                 width: double.infinity,
-                height: 300.0,
+                height: 600.0,
               ),
             ),
           ],
