@@ -159,74 +159,70 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Opacity(
-                          opacity: 0.0,
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              await showModalBottomSheet(
-                                isScrollControlled: true,
-                                backgroundColor: Colors.transparent,
-                                enableDrag: false,
-                                context: context,
-                                builder: (context) {
-                                  return Padding(
-                                    padding: MediaQuery.viewInsetsOf(context),
-                                    child: ScanWidget(),
-                                  );
-                                },
-                              ).then((value) => safeSetState(() {}));
-                            },
-                            child: Container(
-                              width: 75.0,
-                              height: 75.0,
-                              child: Stack(
-                                children: [
-                                  Material(
-                                    color: Colors.transparent,
-                                    elevation: 2.0,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(35.0),
-                                    ),
-                                    child: Container(
-                                      width: 75.0,
-                                      height: 75.0,
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFF54DC9E),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            blurRadius: 12.0,
-                                            color: Color(0x2B30D28B),
-                                            offset: Offset(0.0, 2.0),
-                                            spreadRadius: 5.0,
-                                          )
-                                        ],
-                                        borderRadius:
-                                            BorderRadius.circular(35.0),
-                                      ),
-                                    ),
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            await showModalBottomSheet(
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              enableDrag: false,
+                              context: context,
+                              builder: (context) {
+                                return Padding(
+                                  padding: MediaQuery.viewInsetsOf(context),
+                                  child: ScanWidget(),
+                                );
+                              },
+                            ).then((value) => safeSetState(() {}));
+                          },
+                          child: Container(
+                            width: 75.0,
+                            height: 75.0,
+                            child: Stack(
+                              children: [
+                                Material(
+                                  color: Colors.transparent,
+                                  elevation: 2.0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(35.0),
                                   ),
-                                  Container(
+                                  child: Container(
                                     width: 75.0,
                                     height: 75.0,
                                     decoration: BoxDecoration(
+                                      color: Color(0xFF54DC9E),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 12.0,
+                                          color: Color(0x2B30D28B),
+                                          offset: Offset(0.0, 2.0),
+                                          spreadRadius: 5.0,
+                                        )
+                                      ],
                                       borderRadius: BorderRadius.circular(35.0),
                                     ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 3.5, 0.0, 0.0),
-                                      child: Icon(
-                                        FFIcons.kscanhome2,
-                                        color: Color(0xFFFEFEFE),
-                                        size: 27.0,
-                                      ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 75.0,
+                                  height: 75.0,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(35.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 3.5, 0.0, 0.0),
+                                    child: Icon(
+                                      FFIcons.kscanhome2,
+                                      color: Color(0xFFFEFEFE),
+                                      size: 27.0,
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
