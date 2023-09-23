@@ -59,19 +59,22 @@ class _ScanWidgetState extends State<ScanWidget> {
           topRight: Radius.circular(16.0),
         ),
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            width: double.infinity,
-            height: MediaQuery.sizeOf(context).height * 1.0,
-            child: custom_widgets.CustomScanner(
+      child: Padding(
+        padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
               width: double.infinity,
               height: MediaQuery.sizeOf(context).height * 1.0,
+              child: custom_widgets.CustomScanner(
+                width: double.infinity,
+                height: MediaQuery.sizeOf(context).height * 1.0,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
