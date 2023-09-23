@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/nav_bar1/nav_bar1_widget.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,7 @@ class _StoreCopyCopyWidgetState extends State<StoreCopyCopyWidget> {
               Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.9),
+                    alignment: AlignmentDirectional(0.00, 0.90),
                     child: Container(
                       width: double.infinity,
                       height: 100.0,
@@ -69,7 +70,7 @@ class _StoreCopyCopyWidgetState extends State<StoreCopyCopyWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: wrapWithModel(
                       model: _model.navBar1Model,
                       updateCallback: () => setState(() {}),

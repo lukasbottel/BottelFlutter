@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/nav_bar1/nav_bar1_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,7 +30,7 @@ class _StoreWidgetState extends State<StoreWidget>
       vsync: this,
       length: 5,
       initialIndex: 0,
-    );
+    )..addListener(() => setState(() {}));
   }
 
   @override
@@ -110,7 +111,6 @@ class _StoreWidgetState extends State<StoreWidget>
                           ),
                         ],
                         controller: _model.tabBarController,
-                        onTap: (value) => setState(() {}),
                       ),
                     ),
                     Expanded(
@@ -169,7 +169,7 @@ class _StoreWidgetState extends State<StoreWidget>
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: wrapWithModel(
                   model: _model.navBar1Model,
                   updateCallback: () => setState(() {}),

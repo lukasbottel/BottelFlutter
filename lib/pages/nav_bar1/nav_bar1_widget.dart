@@ -43,7 +43,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 1.0),
+      alignment: AlignmentDirectional(0.00, 1.00),
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
@@ -78,7 +78,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
               ],
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: AlignmentDirectional(0.00, 1.00),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -174,7 +174,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                                   child: ScanWidget(),
                                 );
                               },
-                            ).then((value) => setState(() {}));
+                            ).then((value) => safeSetState(() {}));
                           },
                           child: Container(
                             width: 75.0,

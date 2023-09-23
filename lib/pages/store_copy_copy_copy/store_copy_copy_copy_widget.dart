@@ -119,7 +119,7 @@ class _StoreCopyCopyCopyWidgetState extends State<StoreCopyCopyCopyWidget> {
               Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.9),
+                    alignment: AlignmentDirectional(0.00, 0.90),
                     child: Container(
                       width: double.infinity,
                       height: 100.0,
@@ -138,7 +138,7 @@ class _StoreCopyCopyCopyWidgetState extends State<StoreCopyCopyCopyWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: wrapWithModel(
                       model: _model.navBar1Model,
                       updateCallback: () => setState(() {}),
