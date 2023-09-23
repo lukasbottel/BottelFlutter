@@ -76,11 +76,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'StoreCopyCopyCopy',
           path: '/storeCopyCopyCopy',
           builder: (context, params) => StoreCopyCopyCopyWidget(),
-        ),
-        FFRoute(
-          name: 'HomePageCopy',
-          path: '/homePageCopy',
-          builder: (context, params) => HomePageCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
