@@ -5,18 +5,18 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'nav_bar1_model.dart';
-export 'nav_bar1_model.dart';
+import 'okay_model.dart';
+export 'okay_model.dart';
 
-class NavBar1Widget extends StatefulWidget {
-  const NavBar1Widget({Key? key}) : super(key: key);
+class OkayWidget extends StatefulWidget {
+  const OkayWidget({Key? key}) : super(key: key);
 
   @override
-  _NavBar1WidgetState createState() => _NavBar1WidgetState();
+  _OkayWidgetState createState() => _OkayWidgetState();
 }
 
-class _NavBar1WidgetState extends State<NavBar1Widget> {
-  late NavBar1Model _model;
+class _OkayWidgetState extends State<OkayWidget> {
+  late OkayModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -27,7 +27,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => NavBar1Model());
+    _model = createModel(context, () => OkayModel());
   }
 
   @override

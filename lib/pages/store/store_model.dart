@@ -1,7 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/nav_bar1/nav_bar1_widget.dart';
+import '/pages/okay/okay_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -15,19 +15,19 @@ class StoreModel extends FlutterFlowModel {
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
 
-  // Model for NavBar1 component.
-  late NavBar1Model navBar1Model;
+  // Model for okay component.
+  late OkayModel okayModel;
 
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
-    navBar1Model = createModel(context, () => NavBar1Model());
+    okayModel = createModel(context, () => OkayModel());
   }
 
   void dispose() {
     unfocusNode.dispose();
     tabBarController?.dispose();
-    navBar1Model.dispose();
+    okayModel.dispose();
   }
 
   /// Action blocks are added here.

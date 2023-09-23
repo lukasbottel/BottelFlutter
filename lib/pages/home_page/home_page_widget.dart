@@ -2,7 +2,7 @@ import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/nav_bar1/nav_bar1_widget.dart';
+import '/pages/okay/okay_widget.dart';
 import '/pages/scan/scan_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -68,9 +68,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             Stack(
               children: [
                 wrapWithModel(
-                  model: _model.navBar1Model,
+                  model: _model.okModel,
                   updateCallback: () => setState(() {}),
-                  child: NavBar1Widget(),
+                  child: OkayWidget(),
                 ),
                 Align(
                   alignment: AlignmentDirectional(-0.06, 0.96),
