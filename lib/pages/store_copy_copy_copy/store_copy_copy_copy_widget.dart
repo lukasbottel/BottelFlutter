@@ -1,7 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/okay/okay_widget.dart';
+import '/pages/nav_bar1/nav_bar1_widget.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -140,9 +140,9 @@ class _StoreCopyCopyCopyWidgetState extends State<StoreCopyCopyCopyWidget> {
                   Align(
                     alignment: AlignmentDirectional(0.00, 0.00),
                     child: wrapWithModel(
-                      model: _model.okayModel,
+                      model: _model.navBar1Model,
                       updateCallback: () => setState(() {}),
-                      child: OkayWidget(),
+                      child: NavBar1Widget(),
                     ),
                   ),
                 ],

@@ -26,8 +26,12 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   action_slider: ^0.7.0
+  archive: ^3.3.7
   auto_size_text: 3.0.0
   cached_network_image: 3.2.1
+  camera: ^0.10.5+4
+  camera_platform_interface: ^2.5.2
+  clock: ^1.1.1
   expandable: 5.0.1
   flutter_animate: 4.1.1+1
   flutter_cache_manager: 3.3.0
@@ -41,15 +45,19 @@ dependencies:
   google_maps_flutter: 2.2.6
   google_maps_flutter_platform_interface: 2.2.6
   google_maps_flutter_web: 0.4.0+8
+  image: ^4.0.17
   intl: 0.18.0
   json_path: 0.6.2
+  meta: ^1.9.1
   modal_bottom_sheet: ^2.1.2
   page_transition: 2.0.4
+  path: ^1.8.3
   path_provider: 2.0.14
   path_provider_android: 2.0.25
   path_provider_foundation: 2.2.2
   path_provider_platform_interface: 2.0.6
   provider: 6.0.4
+  qr_code_dart_scan: ^0.7.2
   shared_preferences: 2.0.15
   shared_preferences_android: 2.1.0
   shared_preferences_ios: 2.1.1
