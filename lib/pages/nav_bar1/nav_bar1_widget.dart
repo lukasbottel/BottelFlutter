@@ -64,6 +64,9 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                   child: Container(
                     width: double.infinity,
                     height: 85.0,
+                    constraints: BoxConstraints(
+                      maxHeight: 85.0,
+                    ),
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [Colors.white, Color(0xFFFEFEFE)],
@@ -151,76 +154,79 @@ class _NavBar1WidgetState extends State<NavBar1Widget> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 35.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            await showModalBottomSheet(
-                              isScrollControlled: true,
-                              backgroundColor: Colors.transparent,
-                              enableDrag: false,
-                              context: context,
-                              builder: (context) {
-                                return Padding(
-                                  padding: MediaQuery.viewInsetsOf(context),
-                                  child: ScanWidget(),
-                                );
-                              },
-                            ).then((value) => safeSetState(() {}));
-                          },
-                          child: Container(
-                            width: 75.0,
-                            height: 75.0,
-                            child: Stack(
-                              children: [
-                                Material(
-                                  color: Colors.transparent,
-                                  elevation: 2.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(35.0),
+                        Opacity(
+                          opacity: 0.0,
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              await showModalBottomSheet(
+                                isScrollControlled: true,
+                                backgroundColor: Colors.transparent,
+                                enableDrag: false,
+                                context: context,
+                                builder: (context) {
+                                  return Padding(
+                                    padding: MediaQuery.viewInsetsOf(context),
+                                    child: ScanWidget(),
+                                  );
+                                },
+                              ).then((value) => safeSetState(() {}));
+                            },
+                            child: Container(
+                              width: 75.0,
+                              height: 75.0,
+                              child: Stack(
+                                children: [
+                                  Material(
+                                    color: Colors.transparent,
+                                    elevation: 2.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(35.0),
+                                    ),
+                                    child: Container(
+                                      width: 75.0,
+                                      height: 75.0,
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFF54DC9E),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 12.0,
+                                            color: Color(0x2B30D28B),
+                                            offset: Offset(0.0, 2.0),
+                                            spreadRadius: 5.0,
+                                          )
+                                        ],
+                                        borderRadius:
+                                            BorderRadius.circular(35.0),
+                                      ),
+                                    ),
                                   ),
-                                  child: Container(
+                                  Container(
                                     width: 75.0,
                                     height: 75.0,
                                     decoration: BoxDecoration(
-                                      color: Color(0xFF54DC9E),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 12.0,
-                                          color: Color(0x2B30D28B),
-                                          offset: Offset(0.0, 2.0),
-                                          spreadRadius: 5.0,
-                                        )
-                                      ],
                                       borderRadius: BorderRadius.circular(35.0),
                                     ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 75.0,
-                                  height: 75.0,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(35.0),
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 3.5, 0.0, 0.0),
-                                    child: Icon(
-                                      FFIcons.kscanhome2,
-                                      color: Color(0xFFFEFEFE),
-                                      size: 27.0,
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 3.5, 0.0, 0.0),
+                                      child: Icon(
+                                        FFIcons.kscanhome2,
+                                        color: Color(0xFFFEFEFE),
+                                        size: 27.0,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
