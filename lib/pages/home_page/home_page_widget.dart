@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -41,32 +42,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         body: Stack(
           children: [
-            Container(
-              width: double.infinity,
-              height: MediaQuery.sizeOf(context).height * 1.0,
-              decoration: BoxDecoration(
-                color: Color(0xFF969696),
-              ),
-              child: SingleChildScrollView(
-                primary: false,
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
-                      child: Image.asset(
-                        'assets/images/CleanShot_2023-09-23_at_21.33.06@2x.png',
-                        width: double.infinity,
-                        height: MediaQuery.sizeOf(context).height * 1.0,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            FlutterFlowGoogleMap(
+              controller: _model.googleMapsController,
+              onCameraIdle: (latLng) => _model.googleMapsCenter = latLng,
+              initialLocation: _model.googleMapsCenter ??=
+                  LatLng(13.106061, -59.613158),
+              markerColor: GoogleMarkerColor.violet,
+              mapType: MapType.normal,
+              style: GoogleMapStyle.silver,
+              initialZoom: 16.0,
+              allowInteraction: true,
+              allowZoom: true,
+              showZoomControls: false,
+              showLocation: true,
+              showCompass: false,
+              showMapToolbar: false,
+              showTraffic: false,
+              centerMapOnMarkerTap: false,
             ),
             wrapWithModel(
               model: _model.navBar1Model,
