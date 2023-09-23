@@ -1,6 +1,5 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -64,16 +63,7 @@ class _ScanWidgetState extends State<ScanWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Container(
-              width: double.infinity,
-              height: MediaQuery.sizeOf(context).height * 1.0,
-              child: custom_widgets.CustomScanner(
-                width: double.infinity,
-                height: MediaQuery.sizeOf(context).height * 1.0,
-              ),
-            ),
-          ],
+          children: [],
         ),
       ),
     );
